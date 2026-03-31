@@ -29,9 +29,14 @@ created() {
  getdetails(id){
     this.loading=true
     this.erorr = null;
-    
+    fetch(https:${id})
+    .then(response => response.json())
+    .then(data =>){
+        this.selectedItem = data;
+        this.loading =false;
+    });
+    }
  }
 
-
-
+});
 app.mount("#app");
