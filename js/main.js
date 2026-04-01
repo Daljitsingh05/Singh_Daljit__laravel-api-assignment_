@@ -26,22 +26,22 @@ created() {
     this.loading = false;
 });
 },
- getDetails(id){
-    this.loading=true
+getDetails(id){
+    this.loading = true;
     this.error = null;
 
-fetch(`http://localhost:8000/api/video-games/${id}`)
-    .then(response => response.json())
-    .then(data => {
-        this.selectedItem = data;
-        this.loading = false;
-    })
-    .catch(error => {
-        this.error = "Failed to load details";
-        this.loading = false;
-    });
+    fetch(`http://localhost:8000/api/video-games/${id}`)
+        .then(response => response.json())
+        .then(data => {
+            this.selectedItem = data;
+            this.loading = false;
+        })
+        .catch(error => {
+            this.error = "Failed to load details";
+            this.loading = false;
+        });
 }
-    }
+    
  }
 
 });
