@@ -22,7 +22,7 @@
  <li 
     v-for="item in items" 
     :key="item.id" 
-    @click="getDetails(item.id)"
+   v-on:click="getDetails(item.id)"
 >
   {{ item.title }} ({{ item.platform }})
 </li>
