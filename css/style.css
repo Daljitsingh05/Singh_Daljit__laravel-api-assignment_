@@ -49,3 +49,11 @@ li:hover {
         flex-direction: column;
     }
 }
+
+.game-item {
+    transition: 0.2s;
+}
+
+.game-item:hover {
+    transform: scale(1.03);
+}
